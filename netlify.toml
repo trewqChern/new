@@ -1,0 +1,22 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/v2/home"
+  to = "/form/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/home"
+  to = "/form/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/result"
+  to = "/result.html"
+  status = 200
+
+[[redirects]]
+  from = "/busy"
+  to = "/busy.html"
+  status = 200
