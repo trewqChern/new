@@ -1,0 +1,335 @@
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, Tahoma, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px 10px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Main Result Card */
+.card-container {
+  width: 100%;
+  max-width: 630px;
+  background-color: #ffffff;
+  border: 1px solid #c2c9d1;
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   HEADER SECTION
+========================================================= */
+.header {
+  display: flex;
+  align-items: stretch;
+  background-color: #ffffff;
+  border-bottom: 2px solid #5aa025;
+  height: 106px;
+}
+
+/* Left: Bangladesh Emblem Box */
+.govt-logo-container {
+  width: 124px;
+  min-width: 124px;
+  background-color: #f7f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-right: 1px solid #d8dee4;
+}
+
+.govt-logo-container img,
+.govt-logo-container svg {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Right: Green Title Banner */
+.header-banner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #005a27 0%, #00602a 60%, #004c1e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background grid / tech perspective texture */
+.banner-svg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Banner Text Content */
+.header-text {
+  position: relative;
+  z-index: 2;
+  padding: 10px 14px 6px 14px;
+}
+
+.ministry-title {
+  color: #95df3d;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.1px;
+  margin-bottom: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.boards-title {
+  color: #ffffff;
+  font-size: 16.5px;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: 0.1px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Sub-bar on bottom of header */
+.header-subbar {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(to bottom, #86ab58 0%, #6f9540 100%);
+  padding: 2px 14px;
+  text-align: right;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.header-subbar span {
+  color: #f6fbf0;
+  font-size: 11px;
+  font-weight: normal;
+  letter-spacing: 0.2px;
+}
+
+/* =========================================================
+   BODY CONTENT AREA
+========================================================= */
+.content-area {
+  padding: 14px 18px 16px 18px;
+  background-color: #ffffff;
+}
+
+/* Examination Result Title */
+.result-title {
+  text-align: center;
+  font-size: 16.5px;
+  font-weight: bold;
+  color: #000000;
+  margin: 4px 0 14px 0;
+  letter-spacing: 0.2px;
+}
+
+/* =========================================================
+   STUDENT CREDENTIALS TABLE
+========================================================= */
+.info-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 1px;
+  background-color: #ffffff;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.info-table td {
+  padding: 4.5px 7px;
+  vertical-align: middle;
+}
+
+/* Alternating Row Coloring */
+.info-table tr.row-shaded td {
+  background-color: #ebedf0;
+}
+
+.info-table tr.row-white td {
+  background-color: #ffffff;
+}
+
+/* Column Widths & Alignments */
+.info-table .col-label-1 {
+  width: 16%;
+  color: #222222;
+}
+
+.info-table .col-val-1 {
+  width: 23%;
+  color: #000000;
+}
+
+.info-table .col-label-2 {
+  width: 21%;
+  color: #222222;
+}
+
+.info-table .col-val-2 {
+  width: 40%;
+  color: #000000;
+}
+
+/* Result & GPA bold highlight */
+.bold-text {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* =========================================================
+   GRADE SHEET SECTION
+========================================================= */
+.grade-sheet-title {
+  text-align: center;
+  font-size: 15.5px;
+  font-weight: bold;
+  color: #000000;
+  margin: 12px 0 10px 0;
+  letter-spacing: 0.2px;
+}
+
+.grade-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 1px;
+  background-color: #ffffff;
+  font-size: 12px;
+}
+
+/* Grade Table Header */
+.grade-table th {
+  background-color: #b4bdc7;
+  color: #000000;
+  font-weight: bold;
+  text-align: left;
+  padding: 4.5px 7px;
+}
+
+.grade-table td {
+  padding: 4.5px 7px;
+  color: #000000;
+}
+
+/* Grade Table Alternating Stripes */
+.grade-table tr.row-white td {
+  background-color: #ffffff;
+}
+
+.grade-table tr.row-shaded td {
+  background-color: #edf1f5;
+}
+
+.grade-table .th-code,
+.grade-table .td-code {
+  width: 18%;
+}
+
+.grade-table .th-subject,
+.grade-table .td-subject {
+  width: 66%;
+}
+
+.grade-table .th-grade,
+.grade-table .td-grade {
+  width: 16%;
+}
+
+/* =========================================================
+   SEARCH AGAIN & ACTIONS
+========================================================= */
+.search-again-container {
+  text-align: center;
+  margin: 18px 0 14px 0;
+}
+
+.search-again-link {
+  color: #0000ee;
+  font-weight: bold;
+  font-size: 12.5px;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.search-again-link:hover {
+  text-decoration: underline;
+}
+
+/* Green Divider Line */
+.green-divider {
+  height: 3.5px;
+  background-color: #5aa125;
+  margin: 12px 0 10px 0;
+  border: none;
+}
+
+/* =========================================================
+   FOOTER SECTION
+========================================================= */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 2px 0 2px;
+  font-size: 11px;
+}
+
+.copyright {
+  color: #666666;
+  font-size: 11px;
+}
+
+.powered-by {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #666666;
+  font-size: 11px;
+}
+
+.teletalk-box {
+  border: 1px solid #cad2d9;
+  border-radius: 4px;
+  padding: 2px 6px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+}
+
+/* =========================================================
+   PRINT STYLES
+========================================================= */
+@media print {
+  body {
+    background-color: #ffffff;
+    padding: 0;
+  }
+  .card-container {
+    border: none;
+    box-shadow: none;
+    max-width: 100%;
+  }
+  .search-again-container {
+    display: none;
+  }
+}

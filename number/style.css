@@ -1,0 +1,297 @@
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #f1f4f7;
+  color: #333333;
+  padding: 24px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Outer Wrapper / Result Sheet Card */
+.sheet-wrapper {
+  width: 100%;
+  max-width: 720px;
+  background-color: #ffffff;
+  border: 1px solid #dcdfe3;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  padding: 16px 20px 24px 20px;
+}
+
+/* =========================================================
+   HEADER BANNER SECTION
+========================================================= */
+.header-bar {
+  position: relative;
+  background: #036937;
+  background: linear-gradient(180deg, #067239 0%, #02592b 100%);
+  border-radius: 8px;
+  min-height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px 8px 74px;
+  color: #ffffff;
+}
+
+/* Bangladesh Govt Emblem Logo Container */
+.emblem-container {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Circular emblem image */
+.emblem-img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  display: block;
+}
+
+/* Header Banner Text */
+.header-content {
+  text-align: center;
+}
+
+.header-content .main-heading {
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  color: #ffffff;
+}
+
+.header-content .sub-heading {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: #f1f8f3;
+  opacity: 0.95;
+}
+
+/* Examination Result Title */
+.result-title {
+  text-align: center;
+  font-size: 19px;
+  font-weight: 400;
+  color: #1e293b;
+  margin: 22px 0 16px 0;
+  letter-spacing: 0.1px;
+}
+
+/* =========================================================
+   BUTTON ACTIONS (TOP & BOTTOM)
+========================================================= */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #ffffff;
+  line-height: 1.4;
+  font-family: inherit;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.btn-search {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+
+.btn-search:hover {
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+
+.btn-print {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  padding: 5px 14px;
+}
+
+.btn-print:hover {
+  background-color: #449d44;
+  border-color: #398439;
+}
+
+/* =========================================================
+   STUDENT INFORMATION TABLE
+========================================================= */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+.info-table td {
+  padding: 6px 4px;
+  vertical-align: middle;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #1f2937;
+}
+
+.info-table tr:first-child td {
+  border-top: none;
+}
+
+.info-table .col-lbl-1 {
+  width: 22%;
+  color: #333333;
+}
+
+.info-table .col-val-1 {
+  width: 28%;
+  color: #111111;
+}
+
+.info-table .col-lbl-2 {
+  width: 24%;
+  color: #333333;
+}
+
+.info-table .col-val-2 {
+  width: 26%;
+  color: #111111;
+}
+
+/* =========================================================
+   SUBJECT-WISE GRADE/MARKS TABLE
+========================================================= */
+.subject-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2937;
+  margin: 12px 0 10px 0;
+}
+
+.subject-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  border: 1px solid #dddddd;
+  margin-bottom: 24px;
+}
+
+.subject-table th {
+  background-color: #5cb85c;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 7px 8px;
+  border: 1px solid #7bc67b;
+  font-size: 12.5px;
+}
+
+.subject-table td {
+  border: 1px solid #e5e5e5;
+  padding: 6px 8px;
+  color: #1a1a1a;
+  line-height: 1.45;
+  vertical-align: middle;
+}
+
+.subject-table .th-code,
+.subject-table .td-code {
+  width: 16%;
+  text-align: center;
+}
+
+.subject-table .th-name {
+  width: 56%;
+  text-align: center;
+}
+
+.subject-table .td-name {
+  width: 56%;
+  text-align: left;
+  padding-left: 12px;
+}
+
+.subject-table .th-marks,
+.subject-table .td-marks {
+  width: 14%;
+  text-align: center;
+}
+
+.subject-table .th-grade,
+.subject-table .td-grade {
+  width: 14%;
+  text-align: center;
+}
+
+.bottom-btn-group {
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+/* =========================================================
+   PRINT OPTIMIZATIONS
+========================================================= */
+@media print {
+  body {
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sheet-wrapper {
+    border: none;
+    box-shadow: none;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .btn-container {
+    display: none !important;
+  }
+
+  .header-bar {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .subject-table th {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background-color: #5cb85c !important;
+    color: #ffffff !important;
+  }
+}

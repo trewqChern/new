@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Institution Table of Board</title>
+
+    <link rel="stylesheet" type="text/css" href="../../assets/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery.dataTables.min.js"></script>
+    
+    <style>
+      body {
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+      }
+      .header-info {
+        background-color: #14A44D;
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+      }
+      table.dataTable tbody tr {
+        cursor: pointer;
+      }
+      table.dataTable tbody tr:hover {
+        background-color: #e6f7ff !important;
+      }
+      .select-hint {
+        float: right;
+        font-size: 13px;
+        color: #e0f2fe;
+      }
+    </style>
+
+    <script>
+      function get_var(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+
+      var dataUrl = "../../data/institutions_sample.json";
+      var board = get_var('board') || 'DHAKA';
+      var exam = get_var('exam') || 'SSC';
+      var year = get_var('year') || '2024';
+
+      $(document).ready(function() {
+        $('#board_name').text(board.toUpperCase());
+        $('#exam_info').text(exam.toUpperCase() + ' ' + year);
+
+        var table = $('#btbl').DataTable({
+          "ajax": dataUrl,
+          "pageLength": 15,
+          "order": [[2, "asc"]]
+        });
+
+        $('#btbl tbody').on('click', 'tr', function() {
+          var data = table.row(this).data();
+          if (data && data.length > 0) {
+            var eiin = data[0];
+            var instName = data[2];
+            if (window.opener && !window.opener.closed) {
+              try {
+                window.opener.$('#eiin').val(eiin);
+                alert("Selected Institution: " + instName + " (EIIN: " + eiin + ")");
+                window.close();
+              } catch(e) {
+                alert("EIIN: " + eiin + " - " + instName);
+              }
+            } else {
+              alert("EIIN: " + eiin + " - " + instName);
+            }
+          }
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="header-info">
+      <h3 style="margin: 0; display: inline-block;">Institution List - Board: <span id="board_name">DHAKA</span> (<span id="exam_info">SSC 2024</span>)</h3>
+      <span class="select-hint"><span class="glyphicon glyphicon-info-sign"></span> Click any row to select its EIIN</span>
+    </div>
+
+    <table id="btbl" class="display table table-striped table-bordered" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th>EIIN</th>
+          <th>CODE</th>
+          <th>NAME OF INSTITUTION</th>
+          <th>ZILLA</th>
+          <th>UPAZILLA</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>EIIN</th>
+          <th>CODE</th>
+          <th>NAME OF INSTITUTION</th>
+          <th>ZILLA</th>
+          <th>UPAZILLA</th>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

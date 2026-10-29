@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>504 Gateway Time-out - Server Too Busy | WEB BASED RESULT PUBLICATION SYSTEM FOR EDUCATION BOARDS</title>
+  <link rel="icon" type="image/png" href="form/assets/img/favicon.png">
+  <link href="form/assets/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f5f6f8;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      color: #333;
+    }
+    .main-container {
+      max-width: 780px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    #main-header2 {
+      background-color: #14A44D;
+      padding: 12px 15px;
+      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    #main-header2 h4 {
+      color: #ffffff;
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.3px;
+    }
+    #main-header2 small {
+      color: #eafbee;
+      font-size: 12px;
+      display: block;
+      margin-top: 4px;
+    }
+    .error-card {
+      background: #ffffff;
+      border-radius: 10px;
+      border: 1px solid #e1e4e8;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+    .error-header {
+      background: #d9534f;
+      background: linear-gradient(180deg, #d9534f 0%, #c9302c 100%);
+      color: #ffffff;
+      padding: 14px 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .error-body {
+      padding: 30px 25px 35px 25px;
+      text-align: center;
+    }
+    .error-icon {
+      font-size: 58px;
+      color: #d9534f;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .error-title {
+      color: #c9302c;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0 0 12px 0;
+    }
+    .error-desc {
+      font-size: 15px;
+      color: #555555;
+      line-height: 1.6;
+      max-width: 620px;
+      margin: 0 auto 20px auto;
+    }
+    .technical-box {
+      background: #fff8f8;
+      border: 1px solid #f5c6cb;
+      border-radius: 8px;
+      padding: 14px 18px;
+      text-align: left;
+      font-size: 13px;
+      color: #491217;
+      max-width: 580px;
+      margin: 0 auto 25px auto;
+    }
+    .technical-box code {
+      background-color: #f1b0b7;
+      color: #3b060b;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .btn-retry {
+      background-color: #14A44D;
+      border-color: #118a41;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 10px 24px;
+      border-radius: 8px;
+      transition: background-color 0.2s;
+    }
+    .btn-retry:hover {
+      background-color: #0f7a39;
+      color: #ffffff;
+    }
+    .btn-back {
+      background-color: #6c757d;
+      border-color: #5a6268;
+      color: #ffffff;
+      font-size: 15px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-left: 10px;
+      transition: background-color 0.2s;
+    }
+    .btn-back:hover {
+      background-color: #545b62;
+      color: #ffffff;
+    }
+    .countdown-text {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #777;
+    }
+    #dev_info {
+      background: #DCDCDC;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 25px;
+      text-align: center;
+      font-size: 11px;
+      line-height: 1.4;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+
+    <!-- Header Section -->
+    <div id="main-header2">
+      <h4>WEB BASED RESULT PUBLICATION SYSTEM FOR EDUCATION BOARDS</h4>
+      <small>JSC/JDC/SSC/DAKHIL/HSC/ALIM AND EQUIVALENT EXAMINATION</small>
+    </div>
+
+    <!-- Error Card -->
+    <div class="error-card">
+      <div class="error-header">
+        <span class="glyphicon glyphicon-exclamation-sign"></span> 504 Gateway Time-out &mdash; Server Too Busy
+      </div>
+      <div class="error-body">
+        <div class="error-icon">&#9888;</div>
+        <h2 class="error-title">Result Database Server Too Busy</h2>
+        <p class="error-desc">
+          Due to an exceptionally high volume of student requests for <b>HSC / Equivalent Examination Result 2026</b>, the Education Board Database Server did not respond within the time limit.
+        </p>
+
+        <div class="technical-box">
+          <strong>Diagnostic Information:</strong>
+          <ul style="margin: 8px 0 0 18px; padding: 0;">
+            <li>Status Code: <code>HTTP 504 GATEWAY_TIMEOUT</code></li>
+            <li>Error Details: <code>Database Connection Pool Exhausted under Peak Concurrency</code></li>
+            <li>Archive Node: <code>MYMENSINGH / INTER-BOARD ARCHIVE NODE-04</code></li>
+            <li>Timestamp: <span id="timestamp-disp"></span></li>
+          </ul>
+        </div>
+
+        <div>
+          <a href="form/index.html?retry=1" class="btn btn-retry" id="retry-btn">
+            <span class="glyphicon glyphicon-repeat"></span> Try Again Now
+          </a>
+          <a href="form/index.html" class="btn btn-back">
+            <span class="glyphicon glyphicon-home"></span> Back to Form
+          </a>
+        </div>
+
+        <div class="countdown-text">
+          Automatic retry in <b id="countdown" style="color: #c9302c;">10</b> seconds...
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Information -->
+    <div id="dev_info">
+      <p>Result Information Maintenance and Update: <i>Respective Board</i></p>
+      <p>&copy; 2026 Ministry of Education, Government of the People's Republic of Bangladesh. All rights reserved.</p>
+    </div>
+
+  </div>
+
+  <script>
+    // Format timestamp
+    document.getElementById('timestamp-disp').textContent = new Date().toUTCString();
+
+    // Auto-retry countdown
+    var seconds = 10;
+    var countdownEl = document.getElementById('countdown');
+    var timer = setInterval(function() {
+      seconds--;
+      if (countdownEl) countdownEl.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = 'form/index.html?retry=1';
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>

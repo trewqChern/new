@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta charset="utf-8">
+    <title>WEB BASED RESULT PUBLICATION SYSTEM FOR EDUCATION BOARD</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap & Dialog CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-dialog.min.css">
+    <!-- Number Folder Sheet Styles -->
+    <link rel="stylesheet" type="text/css" href="assets/css/number_result.css">
+
+    <style>
+@media (min-width:1025px) and (max-width:1280px){}#wrapper{width:100%}#page-wrapper{padding:0 50px}.alert{padding:5px;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px}.alert-info{background-color:#e6f7ff}.alert-success{background-color:#ecf9ec}.buttons{padding:5px}.app-container{width:100%;position:relative}.login-container{position:relative}.login-panel{margin-top:25%;margin-bottom:25%}.photo-preview{width:150px;height:150px;border:3px solid green}.striped{background-color:#f9f9f9;border-top:1px solid #ddd;margin:0 1px}.vertical-striped{border-right:1px solid #ddd}.rightpadding{padding-right:1px}.leftpadding{padding-left:1px}.divpadding{padding:10px 0}.vcenter{display:inline-block;vertical-align:middle;float:none}.table>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th{vertical-align:middle}.table>tbody>tr>td.cent-align{text-align:center}.table>tbody>tr>td.right-align{text-align:right}.btn-info{-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;border-style:none;background-color:#54B4D3}.btn-success{-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;border-style:none;background-color:#14A44D}.btn-primary{-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;border-style:none;background-color:#3B71CA}.btn-danger{-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;border-style:none;background-color:#DC4C64}.btn-warning{-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;border-style:none;background-color:#E4A11B}.btn-secondary{-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;border-style:none;background-color:#9FA6B2}.btn-light{-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;border-style:none;background-color:#FBFBFB}.btn-dark{-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;border-style:none;background-color:#332D2D}@media print{.page-header{text-align:center}html,body{height:auto;font-size:11px}body{font-size:14px!important}.table-striped,.table-container table,#pass_fail_history table,#gpa_pass_history table{width:100%!important;margin:0!important;display:table!important;table-layout:auto!important;font-size:inherit}.table>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th{padding:8px!important;font-size:14px!important}.table-container{overflow:visible!important}.table-container table{width:100%!important;display:table!important;table-layout:auto!important;box-shadow:none!important}.table-striped{box-shadow:none!important}.btn-group{display:none}#err_msg{display:none}.social{display:none}#dev_info{display:none}}fieldset{background:#F5F5F5;-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px}label{font-weight:700;}.bgcolor-success{background-color:#14A44D}.bgcolor-info{background-color:#54B4D3}.bgcolor-warn{background-color:#E4A11B}.bgcolor-primary{background-color:#3B71CA}.bd-flag-red{background-color:#F42A41}.bd-flag-green{background-color:#006A4E}.rounded-corner{border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px}#main-header2{height:auto;margin-top:15px;margin-bottom:15px;background-color:#14A44D;padding-top:10px;padding-bottom:10px;text-align:center;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px}#dev_info{background:#DCDCDC;padding:10px;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;height:80px;margin-top:15px;margin-bottom:15px}#inst_info{background:#DCDCDC;padding:10px;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;height:auto;margin-top:15px;margin-bottom:15px;text-align:center;font-weight:700;;color:red}#dev_info p{text-align:center;line-height:1.3;font-size:11px}#loading{display:none}#loading-error{display:none}.modal{display:none;position:fixed;z-index:1000;top:0;left:0;height:100%;width:100%;background:rgba(255,255,255,.8) url(assets/img/loading.gif) 50% 50% no-repeat}body.loading{overflow:hidden}body.loading .modal{display:block}.addr-legend{border-style:none;border-width:0;font-size:14px;line-height:20px;margin-bottom:0}.addr-fieldset{border:2px groove threedface #444;-webkit-box-shadow:0 0 0 0 #000;box-shadow:0 0 0 0 #000}#pass_fail_history{table{display:table;width:90%;margin:auto;box-shadow:0 0 20px rgba(0,0,0,.15)}}#gpa_pass_history{table{display:table;width:90%;margin:auto;box-shadow:0 0 20px rgba(0,0,0,.15)}}.table-container{table{display:table;width:90%;margin:auto;border-collapse:collapse;box-shadow:0 0 20px rgba(0,0,0,.15)}}.table-striped{display:table;width:90%;margin:auto;border-collapse:collapse;box-shadow:0 0 20px rgba(0,0,0,.15)}.table-striped thead tr{background-color:#14A44D;color:#fff;text-align:left}.table-striped th,.table-striped td{padding:12px 15px}.table-striped tbody tr{border-bottom:1px solid #ddd}.table-striped tbody tr:nth-of-type(even){background-color:#f3f3f3}.table-striped tbody tr:last-of-type{border-bottom:2px solid #009879}.table-striped tbody tr.active-row{font-weight:700;color:#009879}@media (max-width:767px){#page-wrapper{padding:0 10px}.panel-body,.panel-heading{word-wrap:break-word}.table-striped,.table-container table,#pass_fail_history table,#gpa_pass_history table{width:100%!important;display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}}.table-container{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}.table-container table{width:100%;border-collapse:collapse}@media (max-width:767px){.table-container table{width:100%!important;margin:0!important;display:table;table-layout:auto}}
+#captcha_img {
+  border: 1px solid #ccc;
+  vertical-align: middle;
+  height: 38px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.fleft {
+  float: left;
+}
+#loading-modal {
+  display: none;
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  align-items: center;
+  justify-content: center;
+}
+body.loading #loading-modal {
+  display: flex !important;
+}
+.loading-dialog {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+  width: 90%;
+  max-width: 420px;
+  padding: 26px 24px;
+  text-align: center;
+  border: 1px solid #dcdfe3;
+  animation: fadeInModal 0.25s ease-out;
+}
+@keyframes fadeInModal {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.css-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #e2f4e8;
+  border-top: 4px solid #14A44D;
+  border-radius: 50%;
+  animation: spinLoader 0.75s linear infinite;
+  display: inline-block;
+  margin: 0 auto;
+}
+@keyframes spinLoader {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+    </style>
+
+    <meta name="description" content="All Bangladesh Education Board Result Archive, with Detailed Marks if available, for JSC, JDC, SSC, DAKHIL, HSC, ALIM, VOCATIONAL exams">
+    <meta name="keywords" content="education,board,result,jsc,jdc,ssc,hsc,dakhil,alim,vocational,marks">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div id="main-header2">
+        <div class="fleft">
+          <img align="left" src="assets/img/logo.png" width="80" height="80" style="width: 80px; padding: 5px 5px 5pt;" alt="Bangladesh Education Board Logo">
+        </div>
+        <div style="margin-left:80px; ">
+          <h4><font color="white">WEB BASED RESULT PUBLICATION SYSTEM FOR EDUCATION BOARD</font></h4>
+          <h5><font color="white">JSC/JDC/SSC/DAKHIL/HSC/ALIM AND EQUIVALENT EXAMINATION</font></h5>
+        </div>
+      </div>
+
+      <div id="page-wrapper">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="page-header text-center" id="page-header"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="row buttons" id="buttons_up" style="display: none;"></div>
+          <br/>
+          <div class="col-md-12">
+            <div id="result_display" style="display: none;"></div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">Please provide the following information to view result</div>
+
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <form role="form" id="form" action="" method="post" enctype="multipart/form-data">
+                      <!-- Board -->
+                      <div class="row" id="col_1">
+                        <div id="row_board">
+                          <div class="form-group col-md-5">
+                            <label for="board">Name of Board</label>
+                          </div>
+                          <div class="form-group col-md-7">
+                            <select id="board" name="board" class="form-control" required>
+                              <option value="">Select One</option>
+                              <option value="barisal">Barisal</option>
+                              <option value="chittagong">Chittagong</option>
+                              <option value="comilla">Comilla</option>
+                              <option value="dhaka">Dhaka</option>
+                              <option value="dinajpur">Dinajpur</option>
+                              <option value="jessore">Jessore</option>
+                              <option value="madrasah">Madrasah</option>
+                              <option value="mymensingh" selected>Mymensingh</option>
+                              <option value="rajshahi">Rajshahi</option>
+                              <option value="sylhet">Sylhet</option>
+                              <option value="tec">Technical</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Exam -->
+                      <div class="row" id="col_2">
+                        <div id="row_exam">
+                          <div class="form-group col-md-5">
+                            <label for="exam">Name of Examination</label>
+                          </div>
+                          <div class="form-group col-md-7">
+                            <select id="exam" name="exam" class="form-control" required>
+                              <option value="">Select One</option>
+                              <option value="jsc">JSC/JDC</option>
+                              <option value="ssc">SSC/Dakhil/Equivalent</option>
+                              <option value="hsc" selected>HSC/Alim/Equivalent</option>
+                              <option value="dibs">DIBS (Diploma in Business Studies)</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Year -->
+                      <div class="row" id="col_3">
+                        <div id="row_year">
+                          <div class="form-group col-md-5">
+                            <label for="year">Year of Examination</label>
+                          </div>
+                          <div class="form-group col-md-7">
+                            <select id="year" name="year" class="form-control" required>
+                              <option value="">Select One</option>
+                              <option value="2026" selected>2026</option>
+                              <option value="2025">2025</option>
+                              <option value="2024">2024</option>
+                              <option value="2023">2023</option>
+                              <option value="2022">2022</option>
+                              <option value="2021">2021</option>
+                              <option value="2020">2020</option>
+                              <option value="2019">2019</option>
+                              <option value="2018">2018</option>
+                              <option value="2017">2017</option>
+                              <option value="2016">2016</option>
+                              <option value="2015">2015</option>
+                              <option value="2014">2014</option>
+                              <option value="2013">2013</option>
+                              <option value="2012">2012</option>
+                              <option value="2011">2011</option>
+                              <option value="2010">2010</option>
+                              <option value="2009">2009</option>
+                              <option value="2008">2008</option>
+                              <option value="2007">2007</option>
+                              <option value="2006">2006</option>
+                              <option value="2005">2005</option>
+                              <option value="2004">2004</option>
+                              <option value="2003">2003</option>
+                              <option value="2002">2002</option>
+                              <option value="2001">2001</option>
+                              <option value="2000">2000</option>
+                              <option value="1999">1999</option>
+                              <option value="1998">1998</option>
+                              <option value="1997">1997</option>
+                              <option value="1996">1996</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Result Type -->
+                      <div class="row" id="col_4">
+                        <div id="row_result_type">
+                          <div class="form-group col-md-5">
+                            <label for="result_type"><font color="red">Type of Result</font></label>
+                          </div>
+                          <div class="form-group col-md-7">
+                            <select id="result_type" name="result_type" class="form-control" required>
+                              <option value="">Select One</option>
+                              <option value="1" selected>Individual/Detailed Result</option>
+                              <option value="2">Institution Result</option>
+                              <option value="4">Center Result</option>
+                              <option value="5">District Result</option>
+                              <option value="6">Institution Analytics</option>
+                              <option value="7">Board Analytics</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Roll -->
+                      <div class="row" id="col_5">
+                        <div id="row_roll">
+                          <div class="form-group col-md-5">
+                            <label for="roll">Roll Number of Examinee</label>
+                          </div>
+                          <div class="form-group col-md-7">
+                            <input class="form-control" type="number" name="roll" value="" placeholder="201174" id="roll" required step="">
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Registration -->
+                      <div class="row" id="col_6">
+                        <div id="row_reg">
+                          <div class="form-group col-md-5">
+                            <label for="reg">Registration Number of Examinee</label>
+                          </div>
+                          <div class="form-group col-md-7">
+                            <input class="form-control" type="number" name="reg" value="" placeholder="2121066865" id="reg" step="">
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- EIIN -->
+                      <div class="row" id="col_7">
+                        <div id="row_eiin" style="display: none">
+                          <div class="form-group col-md-5">
+                            <label for="eiin">
+                              EIIN Number of Institution &nbsp;&nbsp;&nbsp;
+                              <button id="eiin_finder_tree" type="button" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-search"></span> Tree
+                              </button>&nbsp;
+                              <button id="eiin_finder_tbl" type="button" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-search"></span> List
+                              </button>
+                            </label>
+                          </div>
+                          <div class="form-group col-md-7">
+                            <input class="form-control" type="number" name="eiin" value="" placeholder="" id="eiin" step="">
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- District -->
+                      <div class="row" id="col_8">
+                        <div id="row_dcode" style="display: none">
+                          <div class="form-group col-md-5">
+                            <label for="dcode">Name of District</label>
+                          </div>
+                          <div class="form-group col-md-7">
+                            <select id="dcode" name="dcode" class="form-control">
+                              <option value="">Select One</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Center -->
+                      <div class="row" id="col_9">
+                        <div id="row_ccode" style="display: none">
+                          <div class="form-group col-md-5">
+                            <label for="ccode">Name of Center</label>
+                          </div>
+                          <div class="form-group col-md-7">
+                            <select id="ccode" name="ccode" class="form-control">
+                              <option value="">Select One</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Captcha -->
+                      <div class="row" id="col_10">
+                        <div id="row_captcha">
+                          <div class="form-group col-md-7 vcenter">
+                            <label for="captcha">
+                              Robot Prevention Technique (CAPTCHA) &nbsp;
+                              <img id="captcha_img" src="" alt="CAPTCHA Image">&nbsp;
+                              <button id="captcha_reload" type="button" class="btn btn-md btn-danger">
+                                <span class="glyphicon glyphicon-refresh"></span>&nbsp;Click to load another image
+                              </button>
+                            </label>
+                          </div>
+                          <div class="form-group col-md-5 vcenter">
+                            <input class="form-control" type="number" name="captcha" value="" placeholder="Type the digits visible on the image" id="captcha" autocomplete="off" step="">
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Submit Button -->
+                      <div class="row" id="col_11">
+                        <div id="row_submit">
+                          <div class="form-group">
+                            <label for="submit"></label>
+                          </div>
+                          <div class="form-group">
+                            <input class="btn btn-success center-block" type="submit" name="submit" id="submit" value="View Result">
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row buttons" id="buttons_down" style="display: none;"><br/></div>
+          <br/>
+        </div>
+      </div>
+
+      <div id="dev_info">
+        <p>Powered by <i>Inter-Education Board Coordination Committee</i></p>
+        <p>Result Information Maintenance and Update: <i>Respective Board</i></p>
+        <p>&copy; All rights reserved</p>
+      </div>		
+    </div>
+
+    <!-- Hidden Canvas for Local Captcha Rendering -->
+    <canvas id="captcha_canvas" width="130" height="38" style="display: none;"></canvas>
+
+    <!-- Modal Spinner Overlay with Progress -->
+    <div class="modal" id="loading-modal">
+      <div class="loading-dialog">
+        <div class="loading-icon-wrap">
+          <div class="css-spinner"></div>
+        </div>
+        <h4 style="margin: 14px 0 6px 0; color: #14A44D; font-weight: bold; font-size: 17px;">Searching Result...</h4>
+        <p id="loading-status-msg" style="color: #444; font-size: 13px; margin-bottom: 12px; min-height: 20px;">Connecting to Education Board Result Publication Server...</p>
+        <div class="progress progress-striped active" style="height: 14px; margin-bottom: 10px; border-radius: 7px; background-color: #e9ecef;">
+          <div id="loading-progress-bar" class="progress-bar progress-bar-success" role="progressbar" style="width: 10%; transition: width 0.2s ease;"></div>
+        </div>
+        <small style="color: #777; font-size: 11.5px;">Querying database for Roll: <b id="loading-roll-disp">201174</b> &bull; Please do not close this window</small>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-dialog.min.js"></script>
+
+    <script type="text/javascript">
+      // Framing check
+      if (top != self) {
+        try {
+          top.location.replace(document.location);
+        } catch(e) {}
+      }
+
+      var app_lang = 'en';
+      var search_again_label = 'Search Again';
+      var print_label = 'Print';
+      var download_label = 'Download';
+      var view_label = 'View';
+      var toggle_view_label = 'Change View';
+      var view_board_tree_label = 'Tree View';
+      var grd_start_config = {"ssc":2001,"hsc":2003,"jsc":2010};
+      var dist_list_url = 'data/districts.json';
+      var cent_list_url = 'data/centers_dhaka.json';
+      var eiin_finder_tree_url = 'app/stud/btree.html';
+      var eiin_finder_tbl_url = 'app/stud/btbl.html';
+
+      var currentCaptchaText = "";
+      var allDistrictsData = null;
+      var allInstitutionsData = null;
+
+      // Pre-load districts and institutions data
+      $.getJSON('data/districts.json', function(data) {
+        allDistrictsData = data;
+      }).fail(function() {
+        console.warn("Local districts.json not loaded via direct file, fallback used.");
+      });
+
+      $.getJSON('data/institutions_sample.json', function(data) {
+        allInstitutionsData = data;
+      }).fail(function() {
+        console.warn("Institutions data will use default sample list.");
+      });
+
+      // Local Captcha Generator using HTML5 Canvas
+      function generateCaptcha() {
+        var chars = "0123456789";
+        var length = 4;
+        var text = "";
+        for (var i = 0; i < length; i++) {
+          text += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        currentCaptchaText = text;
+
+        var canvas = document.getElementById('captcha_canvas');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+
+        // Background
+        ctx.fillStyle = '#f7f9fa';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Noise lines
+        for (var i = 0; i < 4; i++) {
+          ctx.strokeStyle = 'rgba(' + Math.floor(Math.random()*150) + ',' + Math.floor(Math.random()*150) + ',' + Math.floor(Math.random()*150) + ', 0.35)';
+          ctx.lineWidth = 1 + Math.random();
+          ctx.beginPath();
+          ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
+          ctx.bezierCurveTo(
+            Math.random() * canvas.width, Math.random() * canvas.height,
+            Math.random() * canvas.width, Math.random() * canvas.height,
+            Math.random() * canvas.width, Math.random() * canvas.height
+          );
+          ctx.stroke();
+        }
+
+        // Noise dots
+        for (var i = 0; i < 30; i++) {
+          ctx.fillStyle = 'rgba(' + Math.floor(Math.random()*200) + ',' + Math.floor(Math.random()*200) + ',' + Math.floor(Math.random()*200) + ', 0.5)';
+          ctx.beginPath();
+          ctx.arc(Math.random() * canvas.width, Math.random() * canvas.height, 1, 0, 2 * Math.PI);
+          ctx.fill();
+        }
+
+        // Render digits with distortion
+        var colors = ['#0d47a1', '#b71c1c', '#1b5e20', '#4a148c', '#e65100'];
+        var startX = 18;
+        for (var i = 0; i < text.length; i++) {
+          ctx.save();
+          var digit = text[i];
+          var angle = (Math.random() - 0.5) * 0.35; // Slight rotation
+          var fontSize = Math.floor(Math.random() * 4) + 24; // 24-28px
+          ctx.font = 'bold ' + fontSize + 'px Arial, sans-serif';
+          ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
+          ctx.translate(startX + (i * 26), 28);
+          ctx.rotate(angle);
+          ctx.fillText(digit, 0, 0);
+          ctx.restore();
+        }
+
+        var dataUrl = canvas.toDataURL('image/png');
+        $('#captcha_img').attr('src', dataUrl);
+        if (!$('#captcha').val()) {
+          $('#captcha').val(text);
+        }
+      }
+
+      function bsalert(msg) {
+        alert("Message from Server:\n" + msg);
+      }
+
+      function get_exam(exam) {
+        var name = '';
+        switch(exam) {
+          case 'jsc': name = "JSC or Equivalent"; break;
+          case 'ssc': name = "SSC or Equivalent"; break;
+          case 'hsc': name = "HSC or Equivalent"; break;
+          case 'dibs': name = "DIBS"; break;
+          default: name = (exam || "").toUpperCase(); break;
+        }
+        return name;
+      }
+
+      // Show/hide fields depending on Result Type
+      function show_result_type(div) {
+        var val = $(div).val();
+        var arows = ['roll', 'reg', 'eiin', 'dcode', 'ccode'];
+        var common = ['captcha', 'submit'];
+
+        if (val == '') {
+          for (var i in arows) { $('#row_' + arows[i]).hide(); }
+          for (var i in common) { $('#row_' + common[i]).hide(); }
+          return;
+        }
+
+        for (var i in common) { $('#row_' + common[i]).show(); }
+        $('#captcha').prop('required', true);
+
+        var rdiv = {
+          1: { "roll": { "required": "true" }, "reg": { "required": "false" } },
+          2: { "eiin": { "required": "true" } },
+          3: { "roll": { "required": "true" } },
+          4: { "dcode": { "required": "true" }, "ccode": { "required": "true" } },
+          5: { "dcode": { "required": "true" } },
+          6: { "eiin": { "required": "true" } },
+          7: {},
+          8: { "roll": { "required": "true" }, "reg": { "required": "true" } }
+        };
+
+        var sdiv = rdiv[val] || {};
+        var hdivs = [];
+        for (var i in rdiv) {
+          if (i != val) hdivs.push(rdiv[i]);
+        }
+        var hhdiv = {};
+        for (var i in hdivs) {
+          var key = hdivs[i];
+          for (var j in key) hhdiv[j] = key[j];
+        }
+
+        for (var i in sdiv) {
+          var field = "#row_" + i;
+          $(field).show();
+          if (sdiv[i].required === "true") $('#' + i).prop('required', true);
+          else $('#' + i).prop('required', false);
+        }
+
+        for (var i in hhdiv) {
+          if (!(i in sdiv)) {
+            var field = "#row_" + i;
+            $(field).hide();
+            $('#' + i).prop('required', false);
+          }
+        }
+
+        // Build top and bottom buttons bar
+        var tcom = ' data-toggle="tooltip" data-placement="top" ';
+        var tdiv = '';
+        tdiv += '<div class="text-center">';
+        tdiv += '<div class="btn-group">';
+        tdiv += '<button type="button" class="btn btn-success search-button" id="search"' + tcom + 'title="Click here to search another result">' + search_again_label + '</button>';
+        tdiv += '<button type="button" class="btn btn-info print-button" id="printbtn" onclick="window.print();">' + print_label + '</button>';
+        if (val == '2' || val == '4' || val == '5') {
+          tdiv += '<button type="button" class="btn btn-primary download-button" id="download"' + tcom + 'title="Click here to download a PDF copy of this result">' + download_label + '</button>';
+          tdiv += '<button type="button" class="btn btn-danger view-button" id="view_pdf"' + tcom + 'title="Click here to view a PDF copy of this result in browser">' + view_label + '</button>';
+        }
+        if (val == '6' || val == '7') {
+          tdiv += '<button type="button" class="btn btn-warning toggle-button" id="toggle_view"' + tcom + 'title="Click here to switch between Chart and Tabular views">' + toggle_view_label + '</button>';
+        }
+        if (val == '7') {
+          tdiv += '<button type="button" class="btn btn-danger tree-button" id="view_tree"' + tcom + 'title="Click here to see the whole board in a Tree structure">' + view_board_tree_label + '</button>';
+        }
+        tdiv += '</div>';
+        tdiv += '</div>';
+        $('.buttons').html(tdiv);
+        $('[data-toggle="tooltip"]').tooltip({ trigger: 'hover' });
+
+        generateCaptcha();
+      }
+
+      function handle_changes() {
+        var board = $('#board').val();
+        var rtval = $('#result_type').val();
+        if ((rtval == '4' || rtval == '5') && board) {
+          load_dist_list(board);
+        }
+      }
+
+      function load_dist_list(board) {
+        var div = $('#dcode');
+        div.empty().append($('<option>').text('Choose One').attr('value', ''));
+        $('#ccode').empty().append($('<option>').text('Choose One').attr('value', ''));
+
+        if (allDistrictsData && allDistrictsData[board]) {
+          $.each(allDistrictsData[board], function(i, kv) {
+            div.append($('<option>').text(kv.name + ' - ' + kv.code).attr('value', kv.code));
+          });
+        }
+      }
+
+      function dcode_changed() {
+        var cdiv = $('#ccode');
+        cdiv.empty().append($('<option>').text('Choose One').attr('value', ''));
+        var dcode = $('#dcode').val();
+        if (!dcode) return;
+
+        var sampleCenters = [
+          {"code":"101","name":"DHAKA COLLEGE"},
+          {"code":"102","name":"GOVT. SCIENCE COLLEGE"},
+          {"code":"103","name":"VIQARUNNISA NOON SCHOOL & COLLEGE"},
+          {"code":"104","name":"NOTRE DAME COLLEGE"}
+        ];
+        $.each(sampleCenters, function(i, kv) {
+          cdiv.append($('<option>').text(kv.name + ' - ' + kv.code).attr('value', kv.code));
+        });
+      }
+
+      function get_eiin_finder(ftype) {
+        var board = $('#board').val();
+        var exam = $('#exam').val();
+        var year = $('#year').val();
+        if (board == '' || exam == '' || year == '') {
+          bsalert('Please choose Exam, Year, Board first.');
+          return false;
+        }
+
+        var url = (ftype == 'tbl') ? eiin_finder_tbl_url : eiin_finder_tree_url;
+        url += '?board=' + board + '&exam=' + exam + '&year=' + year;
+        window.open(url, 'inst_finder', 'width=950,height=650,scrollbars=yes,resizable=yes');
+      }
+
+      // Function to navigate / lead directly to the result page (result.html)
+      // Adds random loading times of 5-12 seconds + occasional server too busy pages
+      var isSubmitting = false;
+
+      function leadToResultPage() {
+        if (isSubmitting) return;
+        isSubmitting = true;
+
+        var roll = $('#roll').val().trim() || '201174';
+        var reg = $('#reg').val().trim() || '2121066865';
+        $('#loading-roll-disp').text(roll);
+
+        $('body').addClass('loading');
+        $('#loading-modal').css('display', 'flex');
+
+        // Random loading duration between 5 and 12 seconds (5000ms - 12000ms)
+        var minMs = 5000;
+        var maxMs = 12000;
+        var totalDuration = Math.floor(Math.random() * (maxMs - minMs + 1)) + minMs;
+        var startTime = Date.now();
+
+        // Realistic progression steps across the 5-12 seconds
+        var statusStages = [
+          { pct: 15, msg: "Connecting to Education Board Result Publication Server..." },
+          { pct: 35, msg: "Locating examination records for Roll: " + roll + "..." },
+          { pct: 60, msg: "Verifying registration credentials with Mymensingh Board..." },
+          { pct: 85, msg: "Retrieving HSC marksheet and grade statistics..." },
+          { pct: 98, msg: "Compiling response..." }
+        ];
+
+        var progressInterval = setInterval(function() {
+          var elapsed = Date.now() - startTime;
+          var progress = Math.min(Math.floor((elapsed / totalDuration) * 100), 98);
+
+          $('#loading-progress-bar').css('width', progress + '%');
+
+          for (var i = statusStages.length - 1; i >= 0; i--) {
+            if (progress >= statusStages[i].pct) {
+              $('#loading-status-msg').text(statusStages[i].msg);
+              break;
+            }
+          }
+        }, 150);
+
+        // Check if this is a retry attempt from the busy page
+        var urlParams = new URLSearchParams(window.location.search);
+        var isRetry = urlParams.get('retry') === '1' || sessionStorage.getItem('last_attempt_busy') === 'true';
+
+        // 40% probability of server busy on fresh attempt; retry attempts succeed
+        var willBeBusy = !isRetry && (Math.random() < 0.40);
+
+        setTimeout(function() {
+          clearInterval(progressInterval);
+          $('#loading-progress-bar').css('width', '100%');
+
+          if (willBeBusy) {
+            sessionStorage.setItem('last_attempt_busy', 'true');
+            if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
+              window.location.href = '/busy.html';
+            } else {
+              window.location.href = 'busy.html';
+            }
+          } else {
+            sessionStorage.removeItem('last_attempt_busy');
+            if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
+              window.location.href = '/result.html';
+            } else {
+              window.location.href = 'result.html';
+            }
+          }
+        }, totalDuration);
+      }
+
+      // Event Bindings
+      $(document).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip({ trigger: 'hover' });
+        generateCaptcha();
+
+        $('#board').change(handle_changes);
+        $('#exam').change(handle_changes);
+        $('#year').change(handle_changes);
+        $('#result_type').change(function() {
+          handle_changes();
+          show_result_type('#result_type');
+        });
+
+        $('#dcode').change(dcode_changed);
+        $('#eiin_finder_tree').on('click', function() { get_eiin_finder('tree'); });
+        $('#eiin_finder_tbl').on('click', function() { get_eiin_finder('tbl'); });
+
+        $('#captcha_reload').on('click', function() {
+          generateCaptcha();
+          $('#captcha').val('');
+        });
+
+        // Clicking View Result directly leads to the result page
+        $('#submit').on('click', function(e) {
+          e.preventDefault();
+          leadToResultPage();
+        });
+
+        // Pressing Enter on roll, reg or captcha directly leads to the result page
+        $('#roll, #reg, #captcha').on('keypress', function(e) {
+          if (e.which === 13) {
+            e.preventDefault();
+            leadToResultPage();
+          }
+        });
+
+        // Form submission leads to the result page
+        $('#form').on('submit', function(e) {
+          e.preventDefault();
+          leadToResultPage();
+        });
+      });
+    </script>
+  </body>
+</html>

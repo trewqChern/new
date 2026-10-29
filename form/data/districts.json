@@ -1,0 +1,556 @@
+{
+  "barisal": [
+    {
+      "code": 12,
+      "name": "BARGUNA"
+    },
+    {
+      "code": 13,
+      "name": "BARISHAL"
+    },
+    {
+      "code": 18,
+      "name": "BHOLA"
+    },
+    {
+      "code": 19,
+      "name": "JHALAKATI"
+    },
+    {
+      "code": 10,
+      "name": "PATUAKHALI"
+    },
+    {
+      "code": 16,
+      "name": "PIROJPUR"
+    }
+  ],
+  "chittagong": [
+    {
+      "code": 29,
+      "name": "BANDARBAN"
+    },
+    {
+      "code": 18,
+      "name": "CHATTOGRAM"
+    },
+    {
+      "code": 23,
+      "name": "COX'S BAZAR"
+    },
+    {
+      "code": 27,
+      "name": "KHAGRACHHARI"
+    },
+    {
+      "code": 25,
+      "name": "RANGAMATI"
+    }
+  ],
+  "comilla": [
+    {
+      "code": 42,
+      "name": "BRAHMANBARIA"
+    },
+    {
+      "code": 35,
+      "name": "CHANDPUR"
+    },
+    {
+      "code": 37,
+      "name": "CUMILLA"
+    },
+    {
+      "code": 33,
+      "name": "FENI"
+    },
+    {
+      "code": 34,
+      "name": "LAXMIPUR"
+    },
+    {
+      "code": 30,
+      "name": "NOAKHALI"
+    }
+  ],
+  "dhaka": [
+    {
+      "code": 12,
+      "name": "DHAKA"
+    },
+    {
+      "code": 10,
+      "name": "DHAKA MAHANAGARI"
+    },
+    {
+      "code": 26,
+      "name": "FARIDPUR"
+    },
+    {
+      "code": 44,
+      "name": "FOREIGN"
+    },
+    {
+      "code": 14,
+      "name": "GAZIPUR"
+    },
+    {
+      "code": 33,
+      "name": "GOPALGANJ"
+    },
+    {
+      "code": 37,
+      "name": "KISHOREGANJ"
+    },
+    {
+      "code": 28,
+      "name": "MADARIPUR"
+    },
+    {
+      "code": 22,
+      "name": "MANIKGANJ"
+    },
+    {
+      "code": 20,
+      "name": "MUNSHIGANJ"
+    },
+    {
+      "code": 16,
+      "name": "NARAYANGANJ"
+    },
+    {
+      "code": 18,
+      "name": "NARSINGDI"
+    },
+    {
+      "code": 32,
+      "name": "RAJBARI"
+    },
+    {
+      "code": 30,
+      "name": "SHARIATPUR"
+    },
+    {
+      "code": 24,
+      "name": "TANGAIL"
+    }
+  ],
+  "dinajpur": [
+    {
+      "code": 75,
+      "name": "DINAJPUR"
+    },
+    {
+      "code": 55,
+      "name": "GAIBANDHA"
+    },
+    {
+      "code": 65,
+      "name": "KURIGRAM"
+    },
+    {
+      "code": 70,
+      "name": "LALMONIRHAT"
+    },
+    {
+      "code": 60,
+      "name": "NILPHAMARI"
+    },
+    {
+      "code": 85,
+      "name": "PANCHAGARH"
+    },
+    {
+      "code": 50,
+      "name": "RANGPUR"
+    },
+    {
+      "code": 80,
+      "name": "THAKURGAON"
+    }
+  ],
+  "jessore": [
+    {
+      "code": "",
+      "name": ""
+    },
+    {
+      "code": 23,
+      "name": "BAGERHAT"
+    },
+    {
+      "code": 28,
+      "name": "CHUADANGA"
+    },
+    {
+      "code": 30,
+      "name": "JESSORE"
+    },
+    {
+      "code": 33,
+      "name": "JHENIDAH"
+    },
+    {
+      "code": 20,
+      "name": "KHULNA"
+    },
+    {
+      "code": 27,
+      "name": "KUSHTIA"
+    },
+    {
+      "code": 34,
+      "name": "MAGURA"
+    },
+    {
+      "code": 29,
+      "name": "MEHERPUR"
+    },
+    {
+      "code": 32,
+      "name": "NARAIL"
+    },
+    {
+      "code": 25,
+      "name": "SATKHIRA"
+    }
+  ],
+  "madrasah": [
+    {
+      "code": 44,
+      "name": "BAGERHAT"
+    },
+    {
+      "code": 71,
+      "name": "BANDARBAN"
+    },
+    {
+      "code": 58,
+      "name": "BARGUNA"
+    },
+    {
+      "code": 53,
+      "name": "BARISHAL"
+    },
+    {
+      "code": 56,
+      "name": "BHOLA"
+    },
+    {
+      "code": 33,
+      "name": "BOGURA"
+    },
+    {
+      "code": 66,
+      "name": "BRAHAMANBARIA"
+    },
+    {
+      "code": 65,
+      "name": "CHANDPUR"
+    },
+    {
+      "code": 28,
+      "name": "CHAPAINABABGANJ"
+    },
+    {
+      "code": 59,
+      "name": "CHATTOGRAM"
+    },
+    {
+      "code": 51,
+      "name": "CHUADANGA"
+    },
+    {
+      "code": 60,
+      "name": "COX'S BAZAR"
+    },
+    {
+      "code": 64,
+      "name": "CUMILLA"
+    },
+    {
+      "code": 10,
+      "name": "DHAKA"
+    },
+    {
+      "code": 40,
+      "name": "DINAJPUR"
+    },
+    {
+      "code": 16,
+      "name": "FARIDPUR"
+    },
+    {
+      "code": 63,
+      "name": "FENI"
+    },
+    {
+      "code": 35,
+      "name": "GAIBANDHA"
+    },
+    {
+      "code": 13,
+      "name": "GAZIPUR"
+    },
+    {
+      "code": 19,
+      "name": "GOPALGANJ"
+    },
+    {
+      "code": 69,
+      "name": "HABIGANJ"
+    },
+    {
+      "code": 24,
+      "name": "JAMALPUR"
+    },
+    {
+      "code": 46,
+      "name": "JASHORE"
+    },
+    {
+      "code": 54,
+      "name": "JHALOKATHI"
+    },
+    {
+      "code": 48,
+      "name": "JHENAIDAH"
+    },
+    {
+      "code": 34,
+      "name": "JOYPURHAT"
+    },
+    {
+      "code": 72,
+      "name": "KHAGRACHHARI"
+    },
+    {
+      "code": 43,
+      "name": "KHULNA"
+    },
+    {
+      "code": 22,
+      "name": "KISHORGANJ"
+    },
+    {
+      "code": 37,
+      "name": "KURIGRAM"
+    },
+    {
+      "code": 50,
+      "name": "KUSHTIA"
+    },
+    {
+      "code": 38,
+      "name": "LALMONIRHAT"
+    },
+    {
+      "code": 62,
+      "name": "LAXMIPUR"
+    },
+    {
+      "code": 18,
+      "name": "MADARIPUR"
+    },
+    {
+      "code": 49,
+      "name": "MAGURA"
+    },
+    {
+      "code": 11,
+      "name": "MANIKGANJ"
+    },
+    {
+      "code": 52,
+      "name": "MEHERPUR"
+    },
+    {
+      "code": 68,
+      "name": "MOULAVIBAZAR"
+    },
+    {
+      "code": 15,
+      "name": "MUNSHIGANJ"
+    },
+    {
+      "code": 21,
+      "name": "MYMENSINGH"
+    },
+    {
+      "code": 30,
+      "name": "NAOGAON"
+    },
+    {
+      "code": 12,
+      "name": "NARAYANGANJ"
+    },
+    {
+      "code": 29,
+      "name": "NATORE"
+    },
+    {
+      "code": 23,
+      "name": "NETRAKONA"
+    },
+    {
+      "code": 39,
+      "name": "NILFAMARI"
+    },
+    {
+      "code": 61,
+      "name": "NOAKHALI"
+    },
+    {
+      "code": 47,
+      "name": "NORAIL"
+    },
+    {
+      "code": 14,
+      "name": "NORSINGDI"
+    },
+    {
+      "code": 31,
+      "name": "PABNA"
+    },
+    {
+      "code": 42,
+      "name": "PANCHAGAR"
+    },
+    {
+      "code": 57,
+      "name": "PATUAKHALI"
+    },
+    {
+      "code": 55,
+      "name": "PIROJPUR"
+    },
+    {
+      "code": 17,
+      "name": "RAJBARI"
+    },
+    {
+      "code": 27,
+      "name": "RAJSHAHI"
+    },
+    {
+      "code": 73,
+      "name": "RANGAMATI"
+    },
+    {
+      "code": 36,
+      "name": "RANGPUR"
+    },
+    {
+      "code": 45,
+      "name": "SATKHIRA"
+    },
+    {
+      "code": 20,
+      "name": "SHARIATPUR"
+    },
+    {
+      "code": 25,
+      "name": "SHERPUR"
+    },
+    {
+      "code": 32,
+      "name": "SIRAJGANJ"
+    },
+    {
+      "code": 70,
+      "name": "SUNAMGANJ"
+    },
+    {
+      "code": 67,
+      "name": "SYLHET"
+    },
+    {
+      "code": 26,
+      "name": "TANGAIL"
+    },
+    {
+      "code": 41,
+      "name": "THAKURGAON"
+    }
+  ],
+  "mymensingh": [
+    {
+      "code": 41,
+      "name": "JAMALPUR"
+    },
+    {
+      "code": 35,
+      "name": "MYMENSINGH"
+    },
+    {
+      "code": 39,
+      "name": "NETROKONA"
+    },
+    {
+      "code": 43,
+      "name": "SHERPUR"
+    }
+  ],
+  "rajshahi": [
+    {
+      "code": 40,
+      "name": "BOGURA"
+    },
+    {
+      "code": 45,
+      "name": "JOYPURHAT"
+    },
+    {
+      "code": 25,
+      "name": "NAOGAON"
+    },
+    {
+      "code": 20,
+      "name": "NATORE"
+    },
+    {
+      "code": 15,
+      "name": "NAWABGANJ"
+    },
+    {
+      "code": 30,
+      "name": "PABNA"
+    },
+    {
+      "code": 10,
+      "name": "RAJSHAHI"
+    },
+    {
+      "code": 35,
+      "name": "SIRAJGANJ"
+    }
+  ],
+  "sylhet": [
+    {
+      "code": "",
+      "name": ""
+    },
+    {
+      "code": 36,
+      "name": "HABIGANJ"
+    },
+    {
+      "code": 58,
+      "name": "MOULVIBAZAR"
+    },
+    {
+      "code": 90,
+      "name": "SUNAMGANJ"
+    },
+    {
+      "code": 91,
+      "name": "SYLHET"
+    }
+  ],
+  "tec": [
+    {
+      "code": "",
+      "name": "Panchagar"
+    }
+  ]
+}
