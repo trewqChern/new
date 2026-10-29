@@ -27,49 +27,11 @@
 .fleft {
   float: left;
 }
-#loading-modal {
-  display: none;
-  position: fixed;
-  z-index: 999999;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.55);
-  align-items: center;
-  justify-content: center;
+body.under-load, body.under-load * {
+  cursor: wait !important;
 }
-body.loading #loading-modal {
-  display: flex !important;
-}
-.loading-dialog {
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
-  width: 90%;
-  max-width: 420px;
-  padding: 26px 24px;
-  text-align: center;
-  border: 1px solid #dcdfe3;
-  animation: fadeInModal 0.25s ease-out;
-}
-@keyframes fadeInModal {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-.css-spinner {
-  width: 48px;
-  height: 48px;
-  border: 4px solid #e2f4e8;
-  border-top: 4px solid #14A44D;
-  border-radius: 50%;
-  animation: spinLoader 0.75s linear infinite;
-  display: inline-block;
-  margin: 0 auto;
-}
-@keyframes spinLoader {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.modal {
+  display: none !important;
 }
     </style>
 
@@ -200,7 +162,7 @@ body.loading #loading-modal {
                       <div class="row" id="col_4">
                         <div id="row_result_type">
                           <div class="form-group col-md-5">
-                            <label for="result_type"><font color="red">Type of Result</font></label>
+                            <label for="result_type">Type of Result</label>
                           </div>
                           <div class="form-group col-md-7">
                             <select id="result_type" name="result_type" class="form-control" required>
@@ -337,21 +299,6 @@ body.loading #loading-modal {
 
     <!-- Hidden Canvas for Local Captcha Rendering -->
     <canvas id="captcha_canvas" width="130" height="38" style="display: none;"></canvas>
-
-    <!-- Modal Spinner Overlay with Progress -->
-    <div class="modal" id="loading-modal">
-      <div class="loading-dialog">
-        <div class="loading-icon-wrap">
-          <div class="css-spinner"></div>
-        </div>
-        <h4 style="margin: 14px 0 6px 0; color: #14A44D; font-weight: bold; font-size: 17px;">Searching Result...</h4>
-        <p id="loading-status-msg" style="color: #444; font-size: 13px; margin-bottom: 12px; min-height: 20px;">Connecting to Education Board Result Publication Server...</p>
-        <div class="progress progress-striped active" style="height: 14px; margin-bottom: 10px; border-radius: 7px; background-color: #e9ecef;">
-          <div id="loading-progress-bar" class="progress-bar progress-bar-success" role="progressbar" style="width: 10%; transition: width 0.2s ease;"></div>
-        </div>
-        <small style="color: #777; font-size: 11.5px;">Querying database for Roll: <b id="loading-roll-disp">201174</b> &bull; Please do not close this window</small>
-      </div>
-    </div>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -603,49 +550,24 @@ body.loading #loading-modal {
         window.open(url, 'inst_finder', 'width=950,height=650,scrollbars=yes,resizable=yes');
       }
 
-      // Function to navigate / lead directly to the result page (result.html)
-      // Adds random loading times of 5-12 seconds + occasional server too busy pages
+      // Function to navigate to result page simulating website under heavy load
+      // (No popup loading box; browser waits 5-12 seconds, then loads result or busy page)
       var isSubmitting = false;
 
       function leadToResultPage() {
         if (isSubmitting) return;
         isSubmitting = true;
 
-        var roll = $('#roll').val().trim() || '201174';
-        var reg = $('#reg').val().trim() || '2121066865';
-        $('#loading-roll-disp').text(roll);
+        // Visual indication of website under heavy load:
+        // Turn cursor to wait across the entire page and disable submit button
+        $('body').addClass('under-load');
+        $('#submit').prop('disabled', true).css('opacity', '0.7');
+        $('#reset').prop('disabled', true);
 
-        $('body').addClass('loading');
-        $('#loading-modal').css('display', 'flex');
-
-        // Random loading duration between 5 and 12 seconds (5000ms - 12000ms)
+        // Random server response delay between 5 and 12 seconds (5000ms - 12000ms)
         var minMs = 5000;
         var maxMs = 12000;
         var totalDuration = Math.floor(Math.random() * (maxMs - minMs + 1)) + minMs;
-        var startTime = Date.now();
-
-        // Realistic progression steps across the 5-12 seconds
-        var statusStages = [
-          { pct: 15, msg: "Connecting to Education Board Result Publication Server..." },
-          { pct: 35, msg: "Locating examination records for Roll: " + roll + "..." },
-          { pct: 60, msg: "Verifying registration credentials with Mymensingh Board..." },
-          { pct: 85, msg: "Retrieving HSC marksheet and grade statistics..." },
-          { pct: 98, msg: "Compiling response..." }
-        ];
-
-        var progressInterval = setInterval(function() {
-          var elapsed = Date.now() - startTime;
-          var progress = Math.min(Math.floor((elapsed / totalDuration) * 100), 98);
-
-          $('#loading-progress-bar').css('width', progress + '%');
-
-          for (var i = statusStages.length - 1; i >= 0; i--) {
-            if (progress >= statusStages[i].pct) {
-              $('#loading-status-msg').text(statusStages[i].msg);
-              break;
-            }
-          }
-        }, 150);
 
         // Check if this is a retry attempt from the busy page
         var urlParams = new URLSearchParams(window.location.search);
@@ -655,9 +577,6 @@ body.loading #loading-modal {
         var willBeBusy = !isRetry && (Math.random() < 0.40);
 
         setTimeout(function() {
-          clearInterval(progressInterval);
-          $('#loading-progress-bar').css('width', '100%');
-
           if (willBeBusy) {
             sessionStorage.setItem('last_attempt_busy', 'true');
             if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
