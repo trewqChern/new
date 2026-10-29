@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/v2/home", "destination": "/form/index.html" },
+    { "source": "/home", "destination": "/form/index.html" },
+    { "source": "/result", "destination": "/result.html" },
+    { "source": "/busy", "destination": "/busy.html" }
+  ]
+}
