@@ -284,8 +284,39 @@ body {
   }
 
   .header-bar {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+    background: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    min-height: auto !important;
+    padding: 0 !important;
+    margin-bottom: 10px !important;
+    border-radius: 0 !important;
+    display: block !important;
+    text-align: center !important;
+    color: #000000 !important;
+    -webkit-print-color-adjust: economy !important;
+    print-color-adjust: economy !important;
+  }
+
+  .emblem-container {
+    display: none !important;
+  }
+
+  .header-content {
+    text-align: center !important;
+    padding: 0 !important;
+  }
+
+  .header-content .main-heading {
+    color: #000000 !important;
+    font-size: 14.5px !important;
+    font-weight: 700 !important;
+  }
+
+  .header-content .sub-heading {
+    color: #333333 !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
   }
 
   .subject-table th {
