@@ -86,7 +86,7 @@ body.under-load, body.under-load * {
                               <option value="dinajpur">Dinajpur</option>
                               <option value="jessore">Jessore</option>
                               <option value="madrasah">Madrasah</option>
-                              <option value="mymensingh" selected>Mymensingh</option>
+                              <option value="mymensingh">Mymensingh</option>
                               <option value="rajshahi">Rajshahi</option>
                               <option value="sylhet">Sylhet</option>
                               <option value="tec">Technical</option>
@@ -106,7 +106,7 @@ body.under-load, body.under-load * {
                               <option value="">Select One</option>
                               <option value="jsc">JSC/JDC</option>
                               <option value="ssc">SSC/Dakhil/Equivalent</option>
-                              <option value="hsc" selected>HSC/Alim/Equivalent</option>
+                              <option value="hsc">HSC/Alim/Equivalent</option>
                               <option value="dibs">DIBS (Diploma in Business Studies)</option>
                             </select>
                           </div>
@@ -122,7 +122,7 @@ body.under-load, body.under-load * {
                           <div class="form-group col-md-7">
                             <select id="year" name="year" class="form-control" required>
                               <option value="">Select One</option>
-                              <option value="2026" selected>2026</option>
+                              <option value="2026">2026</option>
                               <option value="2025">2025</option>
                               <option value="2024">2024</option>
                               <option value="2023">2023</option>
@@ -167,7 +167,7 @@ body.under-load, body.under-load * {
                           <div class="form-group col-md-7">
                             <select id="result_type" name="result_type" class="form-control" required>
                               <option value="">Select One</option>
-                              <option value="1" selected>Individual/Detailed Result</option>
+                              <option value="1">Individual/Detailed Result</option>
                               <option value="2">Institution Result</option>
                               <option value="4">Center Result</option>
                               <option value="5">District Result</option>
@@ -401,9 +401,6 @@ body.under-load, body.under-load * {
 
         var dataUrl = canvas.toDataURL('image/png');
         $('#captcha_img').attr('src', dataUrl);
-        if (!$('#captcha').val()) {
-          $('#captcha').val(text);
-        }
       }
 
       function bsalert(msg) {
