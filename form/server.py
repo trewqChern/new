@@ -116,7 +116,7 @@ class BoardResultHandler(http.server.SimpleHTTPRequestHandler):
                 board = "MYMENSINGH"
                 gpa = "GPA=4.83"
                 inst = "Mymensingh Govt. College"
-                disp_details = "101+102:153=A,107+108:158=A,275:87=A+,174+175:156=A,176+177:168=A+,265+266:170=A+,178+179:155=A"
+                disp_details = "101+102:153=A,107+108:168=A+,275:87=A+,174+175:156=A,176+177:158=A,265+266:170=A+,178+179:155=A"
             else:
                 stud_name = "MOHAMMAD RAHMAN"
                 f_name = "ABDUL KARIM"
